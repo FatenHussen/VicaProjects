@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "71fb71a5-2a90-4151-8046-bb3951233f85",
+		"name": "vicaProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33801004",
+		"_collection_link": "https://orange-robot-189458.postman.co/workspace/New-Team-Workspace~956b5a9b-9c50-4788-95a6-92466f8233ff/collection/33801004-71fb71a5-2a90-4151-8046-bb3951233f85?action=share&source=collection_link&creator=33801004"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"email\" : \"admin@gmail.com\",\r\n\"password\" : \"admin123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM5OTExMzAsImV4cCI6MTcyMzk5NDczMCwibmJmIjoxNzIzOTkxMTMwLCJqdGkiOiJVOHE5aWVSWFVDRHZ2VnlOIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NFoemLu-YQNLSUd00gT-VLF6-l1XTTB6JONZ_VdAxZk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{baseurl}}/api/auth/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQwNzA3MTAsImV4cCI6MTcyNDA3NDMxMCwibmJmIjoxNzI0MDcwNzEwLCJqdGkiOiJuSGFDSkJ5ZVFYYWNWdHp2Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._KOV9u6L2X-hLHyZJh4DigdKPCFPavXNwVljrjP1AE0"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/auth/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM5OTEzOTMsImV4cCI6MTcyMzk5NDk5MywibmJmIjoxNzIzOTkxMzkzLCJqdGkiOiJxeGRqR1JNWUhRY1l0WjU3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8qc6ulv3g63xwlNSgil9YhRzcuvlE-IAQaUVFG2uLYY"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/api/auth/user-profile"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "message",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/api/message"
+					},
+					"response": []
+				},
+				{
+					"name": "Get-one-message",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/api/message/1"
+					},
+					"response": []
+				},
+				{
+					"name": "send-message",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQxNjI2MjgsImV4cCI6MTcyNDE2NjIyOCwibmJmIjoxNzI0MTYyNjI4LCJqdGkiOiJDTEFmZVZwbDFGZ01uU1ZUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ba5aNI8AH6JQByWRQxXmlgbZj1mD92KyIWZDdCbJkyk"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_name\":\"fofo\",\r\n    \"client_email\":\"fofo@gmail.com\",\r\n    \"message_subject\":\"fofo\",\r\n    \"message_description\":\"hey fofo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/message"
+					},
+					"response": []
+				},
+				{
+					"name": "delete-message",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM5OTEzOTMsImV4cCI6MTcyMzk5NDk5MywibmJmIjoxNzIzOTkxMzkzLCJqdGkiOiJxeGRqR1JNWUhRY1l0WjU3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8qc6ulv3g63xwlNSgil9YhRzcuvlE-IAQaUVFG2uLYY"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/api/message/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "getAllProject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQxNjI2MjgsImV4cCI6MTcyNDE2NjIyOCwibmJmIjoxNzI0MTYyNjI4LCJqdGkiOiJDTEFmZVZwbDFGZ01uU1ZUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ba5aNI8AH6JQByWRQxXmlgbZj1mD92KyIWZDdCbJkyk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/api/projects"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProject",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM5OTQxOTQsImV4cCI6MTcyMzk5Nzc5NCwibmJmIjoxNzIzOTk0MTk0LCJqdGkiOiJtZXNBd0o5Zmw4QUYxWmVFIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.WRGlWin5CHE8a2WnjMBlQ3JltjojzloOf6nQmM8V7xM"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/api/projects/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addproject",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQxNjI2MjgsImV4cCI6MTcyNDE2NjIyOCwibmJmIjoxNzI0MTYyNjI4LCJqdGkiOiJDTEFmZVZwbDFGZ01uU1ZUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ba5aNI8AH6JQByWRQxXmlgbZj1mD92KyIWZDdCbJkyk"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\":\"a\",\r\n\"description\":\"aaaaaaaaa\",\r\n\"year\":\"2004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/projects"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProjectbyId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM5OTQxOTQsImV4cCI6MTcyMzk5Nzc5NCwibmJmIjoxNzIzOTk0MTk0LCJqdGkiOiJtZXNBd0o5Zmw4QUYxWmVFIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.WRGlWin5CHE8a2WnjMBlQ3JltjojzloOf6nQmM8V7xM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/api/projects/1"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQwNjUzODMsImV4cCI6MTcyNDA2ODk4MywibmJmIjoxNzI0MDY1MzgzLCJqdGkiOiI2NmpEQWIwaVplS2N0cjY5Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NlUqgbUTF02J9dPgoKEFDTZpeRWCAi8gPQF0b0N_dTc"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/projects/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skills",
+			"item": [
+				{
+					"name": "GetAllSkills",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/skills"
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"ddddd \"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/skills"
+					},
+					"response": []
+				},
+				{
+					"name": "update_skills",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"data\",\r\n    \"description\":\"mydatra\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/skills/1"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSkill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQwNjUzODMsImV4cCI6MTcyNDA2ODk4MywibmJmIjoxNzI0MDY1MzgzLCJqdGkiOiI2NmpEQWIwaVplS2N0cjY5Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NlUqgbUTF02J9dPgoKEFDTZpeRWCAi8gPQF0b0N_dTc"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseurl}}/api/skills/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GetbyId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/api/skills/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "education",
+			"item": [
+				{
+					"name": "getEducation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/api/education"
+					},
+					"response": []
+				},
+				{
+					"name": "storeEducation",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"institution\": \"Test University\",\r\n    \"degree\": \"BSc\",\r\n    \"start_date\": \"2020-01-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/education"
+					},
+					"response": []
+				},
+				{
+					"name": "update_education",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"institution\": \" University\",\r\n    \"degree\": \"A+\",\r\n    \"start_date\": \"2020-01-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/education/2"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseurl}}/api/education/6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Experience",
+			"item": [
+				{
+					"name": "Experience",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQwNjY4NDIsImV4cCI6MTcyNDA3MDQ0MiwibmJmIjoxNzI0MDY2ODQyLCJqdGkiOiJNdzNaUTk4VjlCaUx0Nzc3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Qu5cXjQFN3lbt_gC5mNM0XwvPH4I8GvJcw8uwEqwjbg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/api/experiences"
+					},
+					"response": []
+				},
+				{
+					"name": "AddExperience",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\": \"Tech \",\r\n    \"role\": \"hardware Engineer\",\r\n    \"start_date\": \"2021-06-01\",\r\n    \"end_date\": \"2023-08-01\",\r\n    \"description\": \"Responsible for developing and maintaining software applications.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/experiences"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateExperience",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\": \" Corp\",\r\n    \"role\": \"Software Engineer\",\r\n    \"start_date\": \"2021-06-01\",\r\n    \"end_date\": \"2023-08-01\",\r\n    \"description\": \"Responsible for developing and maintaining software applications.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/api/experiences/3"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcyNDA3MDcxMCwiZXhwIjoxNzI0MDc0MzM3LCJuYmYiOjE3MjQwNzA3MzcsImp0aSI6InlEeG5nSjdsTDh5djNTbFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wAtACthH9NFOYAWMrWEjOEAufV2WPBsFNeSYOPBRlO8"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseurl}}/api/experiences/4"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
